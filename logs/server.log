@@ -1,0 +1,36 @@
+
+> vibe-generated-app@1.0.0 dev
+> vite
+
+error when starting dev server:
+Error: Port 3000 is already in use
+    at Server.onError (file:///home/workspace/no8:21:28 AM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/SellForm.jsx:18:67: ERROR: Unexpected "!"
+8:21:29 AM [vite] ✨ new dependencies optimized: @splinetool/react-spline, lucide-react
+8:21:29 AM [vite] ✨ optimized dependencies changed. reloading
+8:21:30 AM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/SellForm.jsx:18:67: ERROR: Unexpected "!"
+The file does not exist at "/home/workspace/node_modules/.vite/deps/chunk-I4MZPW7S.js?v=35394813" which is in the optimize deps directory. The dependency might be incompatible with the dep optimizer. Try adding it to `optimizeDeps.exclude`.
+8:21:31 AM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/SellForm.jsx:18:67: ERROR: Unexpected "!"
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/SellForm.jsx:18:67
+  
+  Unexpected "!"
+  16 |    const [payoutMethod, setPayoutMethod] = useState('bank');
+  17 |  
+  18 |    const selected = useMemo(() => COINS.find(c => c.symbol === coin)!, [coin]);
+     |                                                                     ^
+  19 |  
+  20 |    const quote = useMemo(() => {
+  
+      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
+      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
